@@ -82,8 +82,10 @@ export default function Features() {
                 <div className="feature-icon-wrapper">
                   <Icon size={26} strokeWidth={2} />
                 </div>
-                <h3 className="feature-title">{feature.title}</h3>
-                <p className="feature-description">{feature.description}</p>
+                <div className="feature-text">
+                  <h3 className="feature-title">{feature.title}</h3>
+                  <p className="feature-description">{feature.description}</p>
+                </div>
               </div>
             );
           })}

@@ -18,13 +18,13 @@ export default function Footer() {
               Strategy Meets The Tide. 🌊♟️
             </p>
             <div className="footer-social">
-              <a href="#" className="footer-social-link" aria-label="GitHub">
+              <a href="https://github.com/dokyanh220/SeaChess" target="_blank" rel="noopener noreferrer" className="footer-social-link" aria-label="GitHub">
                 <GithubIcon />
               </a>
-              <a href="#" className="footer-social-link" aria-label="Facebook">
+              <a href="https://www.facebook.com/dokyanh220?locale=vi_VN" target="_blank" rel="noopener noreferrer" className="footer-social-link" aria-label="Facebook">
                 <FacebookIcon />
               </a>
-              <a href="mailto:contact@seachess.app" className="footer-social-link" aria-label="Email">
+              <a href="mailto:kyanhdubo2107@gmail.com" className="footer-social-link" aria-label="Email">
                 <Mail size={18} />
               </a>
             </div>
@@ -50,13 +50,14 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Company */}
+          {/* Contact */}
           <div>
             <h4 className="footer-column-title">Liên hệ</h4>
             <ul className="footer-links">
-              <li><a href="#" className="footer-link">Về chúng tôi</a></li>
-              <li><a href="#" className="footer-link">Liên hệ</a></li>
-              <li><a href="#" className="footer-link">Chính sách</a></li>
+              <li><a href="https://anhdo.io.vn" target="_blank" rel="noopener noreferrer" className="footer-link">anhdo.io.vn</a></li>
+              <li><a href="mailto:kyanhdubo2107@gmail.com" className="footer-link">kyanhdubo2107@gmail.com</a></li>
+              <li><a href="https://www.facebook.com/dokyanh220?locale=vi_VN" target="_blank" rel="noopener noreferrer" className="footer-link">Facebook</a></li>
+              <li><a href="https://github.com/dokyanh220" target="_blank" rel="noopener noreferrer" className="footer-link">GitHub</a></li>
             </ul>
           </div>
         </div>

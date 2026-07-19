@@ -9,6 +9,7 @@
   position: relative;
   overflow: hidden;
   padding-top: var(--header-height);
+  width: 100%;
 }
 
 .hero::before {
@@ -74,6 +75,7 @@
   height: 8px;
   background: var(--color-accent-cyan);
   border-radius: 50%;
+  flex-shrink: 0;
   animation: pulse-dot 2s ease-in-out infinite;
 }
 
@@ -84,7 +86,7 @@
 
 .hero-title {
   font-family: var(--font-display);
-  font-size: clamp(2.5rem, 6vw, 4.2rem);
+  font-size: clamp(2rem, 5vw, 4.2rem);
   font-weight: 900;
   line-height: 1.1;
   letter-spacing: -0.02em;
@@ -102,7 +104,7 @@
 }
 
 .hero-description {
-  font-size: 1.15rem;
+  font-size: clamp(0.95rem, 2.5vw, 1.15rem);
   color: var(--color-text-secondary);
   line-height: 1.8;
   max-width: 520px;
@@ -127,6 +129,7 @@
   border: 1px solid var(--color-glass-border);
   border-radius: var(--radius-full);
   transition: all var(--transition-base);
+  white-space: nowrap;
 }
 
 .hero-cta-secondary:hover {
@@ -167,6 +170,8 @@
   justify-content: center;
   align-items: center;
   min-height: 500px;
+  overflow: visible;
+  max-width: 100%;
 }
 
 .hero-mockup-main {
@@ -184,7 +189,7 @@
   border-radius: 28px;
   box-shadow: 0 15px 50px rgba(0, 0, 0, 0.4);
   position: absolute;
-  right: -20px;
+  right: 0;
   top: 60px;
   z-index: 1;
   animation: float 6s ease-in-out infinite;
@@ -219,17 +224,29 @@
 .hero-chess-piece:nth-child(2) { top: 70%; right: 5%; animation-delay: -2s; }
 .hero-chess-piece:nth-child(3) { bottom: 10%; left: 15%; animation-delay: -4s; }
 
+/* ===== TABLET (max-width: 968px) ===== */
 @media (max-width: 968px) {
+  .hero {
+    min-height: auto;
+    padding-top: calc(var(--header-height) + 2rem);
+    padding-bottom: var(--spacing-2xl);
+  }
+
   .hero-inner {
     grid-template-columns: 1fr;
     text-align: center;
     gap: var(--spacing-2xl);
-    padding-top: var(--spacing-2xl);
-    padding-bottom: var(--spacing-2xl);
+    padding: 0 var(--spacing-md);
   }
 
   .hero-content {
     align-items: center;
+    order: 1;
+  }
+
+  .hero-mockups {
+    order: 2;
+    min-height: 350px;
   }
 
   .hero-description {
@@ -244,37 +261,81 @@
     justify-content: center;
   }
 
-  .hero-mockups {
-    min-height: 400px;
-  }
-
   .hero-mockup-main {
     width: 220px;
   }
 
   .hero-mockup-secondary {
     width: 190px;
-    right: 0px;
+    right: 10%;
     top: 40px;
+  }
+
+  .hero-mockup-glow {
+    width: 280px;
+    height: 280px;
   }
 }
 
-@media (max-width: 480px) {
-  .hero-stats {
+/* ===== MOBILE (max-width: 640px) ===== */
+@media (max-width: 640px) {
+  .hero {
+    padding-top: calc(var(--header-height) + 1.5rem);
+    padding-bottom: var(--spacing-xl);
+  }
+
+  .hero-inner {
+    padding: 0 var(--spacing-sm);
     gap: var(--spacing-lg);
   }
 
+  .hero-badge {
+    font-size: 0.7rem;
+    padding: 6px 12px;
+  }
+
+  .hero-title {
+    font-size: clamp(1.6rem, 7vw, 2.4rem);
+  }
+
+  .hero-description {
+    font-size: 0.9rem;
+    line-height: 1.7;
+  }
+
+  .hero-stats {
+    gap: var(--spacing-lg);
+    width: 100%;
+    justify-content: space-around;
+  }
+
   .hero-stat-number {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
+  }
+
+  .hero-stat-label {
+    font-size: 0.7rem;
+  }
+
+  .hero-mockups {
+    min-height: 300px;
   }
 
   .hero-mockup-main {
-    width: 180px;
+    width: 170px;
+    border-radius: 24px;
   }
 
   .hero-mockup-secondary {
-    width: 155px;
-    right: 10px;
+    width: 145px;
+    right: 5%;
+    top: 30px;
+    border-radius: 20px;
+  }
+
+  .hero-mockup-glow {
+    width: 220px;
+    height: 220px;
   }
 
   .hero-cta-group {
@@ -286,5 +347,34 @@
   .hero-cta-group .hero-cta-secondary {
     width: 100%;
     justify-content: center;
+  }
+
+  .hero-chess-piece {
+    font-size: 1.2rem;
+  }
+}
+
+/* ===== VERY SMALL (max-width: 380px) ===== */
+@media (max-width: 380px) {
+  .hero-title {
+    font-size: 1.5rem;
+  }
+
+  .hero-mockup-main {
+    width: 150px;
+    border-radius: 20px;
+  }
+
+  .hero-mockup-secondary {
+    width: 125px;
+    border-radius: 16px;
+  }
+
+  .hero-stat-number {
+    font-size: 1.1rem;
+  }
+
+  .hero-stats {
+    gap: var(--spacing-sm);
   }
 }
