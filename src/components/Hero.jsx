@@ -31,7 +31,7 @@ export default function Hero() {
           </p>
 
           <div className="hero-cta-group animate-fade-in-up delay-3">
-            <a href="#" className="btn-cta" aria-label="Download SeaChess for Android">
+            <a href="/app-release.apk" download className="btn-cta" aria-label="Download SeaChess for Android">
               <AndroidIcon />
               Get it on Android
             </a>

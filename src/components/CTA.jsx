@@ -19,7 +19,7 @@ export default function CTA() {
               Miễn phí, không quảng cáo, trải nghiệm thuần khiết.
             </p>
 
-            <a href="#" className="btn-cta cta-btn-large" aria-label="Download SeaChess APK for Android">
+            <a href="/app-release.apk" download className="btn-cta cta-btn-large" aria-label="Download SeaChess APK for Android">
               <AndroidIcon />
               Download for Android (APK)
               <Download size={20} />
